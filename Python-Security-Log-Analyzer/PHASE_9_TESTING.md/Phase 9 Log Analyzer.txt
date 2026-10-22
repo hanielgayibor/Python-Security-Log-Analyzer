@@ -1,0 +1,41 @@
+Phase 9 – Testing and Debugging
+Objective
+Test the Python Security Log Analyzer to verify that it correctly processes authentication logs, detects suspicious activity, handles invalid records, and generates a security report.
+Test Results
+Test
+Expected Behavior
+Result
+Original sample log
+12 valid events, 5 successful logins, 7 failed logins
+Passed
+Unknown event type
+Reject invalid event and increase malformed count
+Passed
+Missing field
+Reject record with fewer than four fields
+Passed
+Invalid timestamp
+Reject timestamp that cannot be parsed
+Passed
+IP failure threshold
+Flag an IP after three or more failed attempts
+Passed
+Username failure threshold
+Flag a username after three or more failed attempts
+Passed
+Report verification
+Save counts and security alerts to the report
+Passed
+Empty log file
+Run without crashing and report zero events
+Passed
+Findings
+Testing showed that the analyzer can count successful and failed login events, track failures by IP address and username, identify rapid failed login attempts, and generate a report.
+The analyzer also rejected the invalid records used during testing. The empty-log test confirmed that the program can process a file containing no records without crashing.
+Security Relevance
+Log analysis can help security analysts identify repeated authentication failures and other activity that may require investigation. Validating input helps prevent malformed records from being incorrectly counted as legitimate events.
+Alerts do not prove that an attack occurred. Analysts should review additional evidence before deciding whether activity is malicious.
+Limitations
+This is a beginner project using fictional sample logs. Its detection thresholds are configurable examples and have not been validated for a production environment. It does not provide real-time monitoring or confirm whether an account or system was compromised.
+Conclusion
+Phase 9 testing verified the expected behavior of the analyzer across normal, invalid, suspicious, and empty-log scenarios. The project demonstrates foundational Python programming, log analysis, input validation, threshold-based detection, and security reporting.

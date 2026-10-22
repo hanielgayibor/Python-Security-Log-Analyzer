@@ -1,0 +1,27 @@
+SECURITY LOG ANALYZER REPORT
+============================
+Total valid events: 12
+Successful logins: 5
+Failed logins: 7
+Malformed records: 0
+
+FAILED LOGINS BY IP ADDRESS
+192.168.1.50: 5 failed login(s)
+192.168.1.40: 1 failed login(s)
+192.168.1.30: 1 failed login(s)
+
+FAILED LOGINS BY USERNAME
+admin: 2 failed login(s)
+root: 1 failed login(s)
+alice: 1 failed login(s)
+guest: 1 failed login(s)
+charlie: 1 failed login(s)
+bob: 1 failed login(s)
+
+ALL SECURITY ALERTS
+-------------------
+[HIGH] IP 192.168.1.50 had 5 failed login attempts.
+[MEDIUM] IP 192.168.1.50 had consecutive failed login attempts 6 seconds apart.
+[MEDIUM] IP 192.168.1.50 had consecutive failed login attempts 6 seconds apart.
+[MEDIUM] IP 192.168.1.50 had consecutive failed login attempts 6 seconds apart.
+[MEDIUM] IP 192.168.1.50 had consecutive failed login attempts 6 seconds apart.
